@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learnstarz — Films</title>
+    <meta name="description" content="Learnstarz explores films with details, reviews, and highlights. View growth analytics with engaging visuals." />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%E2%98%85%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="brand">
+            <span class="logo">★</span>
+            <h1>Learnstarz</h1>
+            <span class="tag">Films</span>
+        </div>
+        <nav class="nav">
+            <a href="#details">Movie Details</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#highlights">Highlights</a>
+            <a class="cta" href="./analysis.html">View Analysis</a>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h2>Cinema. Reimagined.</h2>
+                <p>Deep dives into films, from cult classics to modern blockbusters.</p>
+                <a class="btn" href="#highlights">Explore Highlights</a>
+            </div>
+        </section>
+
+        <section id="details" class="section">
+            <h3 class="section-title">Movie Details</h3>
+            <div class="cards">
+                <article class="card">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1517602302552-471fe67acf66?q=80&w=1200&auto=format&fit=crop" alt="Film reel" />
+                    <div class="card-body">
+                        <h4>Framing the Narrative</h4>
+                        <p>Discover cinematography techniques that shape compelling stories.</p>
+                        <button class="ghost">Read more</button>
+                    </div>
+                </article>
+                <article class="card">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1200&auto=format&fit=crop" alt="Cinema hall" />
+                    <div class="card-body">
+                        <h4>Soundscapes</h4>
+                        <p>How scores and sound design elevate emotion and tension.</p>
+                        <button class="ghost">Read more</button>
+                    </div>
+                </article>
+                <article class="card">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?q=80&w=1200&auto=format&fit=crop" alt="Director chair" />
+                    <div class="card-body">
+                        <h4>Director's Vision</h4>
+                        <p>Breaking down auteur styles across genres and eras.</p>
+                        <button class="ghost">Read more</button>
+                    </div>
+                </article>
+                <article class="card">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?q=80&w=1200&auto=format&fit=crop" alt="Vintage camera" />
+                    <div class="card-body">
+                        <h4>Practical Effects</h4>
+                        <p>In-camera magic: miniatures, prosthetics, and on‑set ingenuity.</p>
+                        <button class="ghost">Read more</button>
+                    </div>
+                </article>
+                <article class="card">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1200&auto=format&fit=crop" alt="Clapperboard on set" />
+                    <div class="card-body">
+                        <h4>Editing Rhythms</h4>
+                        <p>Cutting patterns that build suspense and drive narrative flow.</p>
+                        <button class="ghost">Read more</button>
+                    </div>
+                </article>
+                <article class="card">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1460881680858-30d872d5b530?q=80&w=1200&auto=format&fit=crop" alt="Film lighting setup" />
+                    <div class="card-body">
+                        <h4>Lighting Languages</h4>
+                        <p>From noir shadows to soft key light: mood through illumination.</p>
+                        <button class="ghost">Read more</button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="movie-detail" aria-labelledby="md-title">
+                <div class="poster-wrap">
+                    <img class="poster" loading="lazy" src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?q=80&w=1000&auto=format&fit=crop" alt="Movie poster" />
+                </div>
+                <div class="info">
+                    <h4 id="md-title">The Edge of Frames <span class="year">(2024)</span></h4>
+                    <div class="meta-row">
+                        <div class="rating" aria-label="User rating 8.4 out of 10">
+                            <span class="star">★</span>
+                            <span class="score">8.4</span>
+                            <span class="outof">/10</span>
+                        </div>
+                        <div class="genres">
+                            <span class="badge genre">Thriller</span>
+                            <span class="badge genre">Mystery</span>
+                            <span class="badge genre">Drama</span>
+                        </div>
+                        <div class="runtime">1h 58m</div>
+                    </div>
+
+                    <p class="synopsis" data-collapsed="true">
+                        When an obsessive editor discovers a hidden pattern across decades of films, a dangerous truth begins to cut through the frame. As timelines splice together, reality blurs and the final cut could be his last.
+                    </p>
+                    <button class="ghost synopsis-toggle" aria-expanded="false">Read more</button>
+
+                    <div class="tabs" data-tabs>
+                        <div class="tablist" role="tablist" aria-label="Movie sections">
+                            <button role="tab" aria-selected="true" class="tab" data-tab="overview">Overview</button>
+                            <button role="tab" aria-selected="false" class="tab" data-tab="cast">Cast</button>
+                            <button role="tab" aria-selected="false" class="tab" data-tab="reviews">Reviews</button>
+                            <button role="tab" aria-selected="false" class="tab" data-tab="stills">Stills</button>
+                        </div>
+                        <div id="panel-overview" class="tabpanel is-active" role="tabpanel" tabindex="0">
+                            <ul class="kv">
+                                <li><span>Director</span><strong>Aria Voss</strong></li>
+                                <li><span>Writer</span><strong>Kenji Rao</strong></li>
+                                <li><span>Studio</span><strong>Northlight Pictures</strong></li>
+                                <li><span>Release</span><strong>Aug 22, 2024</strong></li>
+                            </ul>
+                        </div>
+                        <div id="panel-cast" class="tabpanel" role="tabpanel" tabindex="0" hidden>
+                            <div class="cast-scroller">
+                                <div class="cast">
+                                    <img loading="lazy" src="https://images.unsplash.com/photo-1544006659-f0b21884ce1d?q=80&w=400&auto=format&fit=crop" alt="Cast member" />
+                                    <div class="cast-name">Lina Park</div>
+                                    <div class="cast-role">as Mira</div>
+                                </div>
+                                <div class="cast">
+                                    <img loading="lazy" src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=400&auto=format&fit=crop" alt="Cast member" />
+                                    <div class="cast-name">Zed Coleman</div>
+                                    <div class="cast-role">as Harlan</div>
+                                </div>
+                                <div class="cast">
+                                    <img loading="lazy" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=400&auto=format&fit=crop" alt="Cast member" />
+                                    <div class="cast-name">Nia Ortega</div>
+                                    <div class="cast-role">as Editor</div>
+                                </div>
+                                <div class="cast">
+                                    <img loading="lazy" src="https://images.unsplash.com/photo-1542596768-5d1d21f1cf98?q=80&w=400&auto=format&fit=crop" alt="Cast member" />
+                                    <div class="cast-name">Marco Lin</div>
+                                    <div class="cast-role">as Detective</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="panel-reviews" class="tabpanel" role="tabpanel" tabindex="0" hidden>
+                            <div class="user-reviews">
+                                <blockquote title="Spoiler‑free">
+                                    “Tension calibrated to a razor’s edge; the final act is electrifying.”
+                                </blockquote>
+                                <blockquote>
+                                    “A visual thesis on memory and truth. Compulsively watchable.”
+                                </blockquote>
+                            </div>
+                        </div>
+                        <div id="panel-stills" class="tabpanel" role="tabpanel" tabindex="0" hidden>
+                            <div class="stills-grid">
+                                <img loading="lazy" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop" alt="Film still 1" />
+                                <img loading="lazy" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop" alt="Film still 2" />
+                                <img loading="lazy" src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=1200&auto=format&fit=crop" alt="Film still 3" />
+                                <img loading="lazy" src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?q=80&w=1200&auto=format&fit=crop" alt="Film still 4" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="discussion" class="section alt">
+            <h3 class="section-title">Discussion</h3>
+            <div class="discussion">
+                <article class="comment">
+                    <div class="avatar" aria-hidden="true">AP</div>
+                    <div class="comment-body">
+                        <header>
+                            <strong>Arjun P.</strong>
+                            <span class="timestamp">2h ago</span>
+                        </header>
+                        <p>The match cuts between timelines were brilliant. That elevator sequence had me holding my breath.</p>
+                    </div>
+                </article>
+                <article class="comment">
+                    <div class="avatar" aria-hidden="true">LM</div>
+                    <div class="comment-body">
+                        <header>
+                            <strong>Lina M.</strong>
+                            <span class="timestamp">5h ago</span>
+                        </header>
+                        <p>Score is understated but powerful. Rewatching to catch all the foreshadowing details.</p>
+                    </div>
+                </article>
+                <article class="comment">
+                    <div class="avatar" aria-hidden="true">ZS</div>
+                    <div class="comment-body">
+                        <header>
+                            <strong>Zara S.</strong>
+                            <span class="timestamp">1d ago</span>
+                        </header>
+                        <p>Ending worked for me. Ambiguous yet earned. Curious about others’ interpretations.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="reviews" class="section alt">
+            <h3 class="section-title">Reviews</h3>
+            <div class="reviews">
+                <blockquote>
+                    <p>“A mesmerizing blend of pacing and precision.”</p>
+                    <cite>— Learnstarz Critics</cite>
+                </blockquote>
+                <blockquote>
+                    <p>“A masterclass in visual storytelling.”</p>
+                    <cite>— Weekly Frames</cite>
+                </blockquote>
+            </div>
+        </section>
+
+        <section id="highlights" class="section">
+            <h3 class="section-title">Highlights</h3>
+            <ul class="highlight-list">
+                <li>
+                    <span class="badge">Spotlight</span>
+                    An in-depth look at editing rhythms in thrillers.
+                </li>
+                <li>
+                    <span class="badge">Feature</span>
+                    The evolution of practical effects in sci‑fi.
+                </li>
+                <li>
+                    <span class="badge">Interview</span>
+                    Q&A with an indie director on micro‑budget magic.
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2025 Learnstarz • Films & Analysis</p>
+        <a href="./analysis.html" class="link">View Analysis</a>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+    <script src="./script.js"></script>
+</body>
+</html>
+
+

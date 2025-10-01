@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learnstars — View Analysis</title>
+    <meta name="description" content="Learnstars view analysis shows decreasing engagement with animated charts for clarity." />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="brand">
+            <span class="logo">✦</span>
+            <h1>Learnstars</h1>
+            <span class="tag">Education</span>
+        </div>
+        <nav class="nav">
+            <a href="./index.html">Home</a>
+            <a class="cta" href="#" aria-current="page">View Analysis</a>
+        </nav>
+    </header>
+
+    <main id="main" class="analysis-hero">
+        <h2>View Analysis</h2>
+        <p class="muted">Learning engagement growth across resources and guides.</p>
+        <div class="kpi-row">
+            <div class="kpi">
+                <div>Total Views (30d)</div>
+                <div style="font-size:22px;font-weight:700">482,140</div>
+                <div class="trend bad">▼ 38% vs. prior 30d</div>
+            </div>
+            <div class="kpi">
+                <div>Avg. Session Length</div>
+                <div style="font-size:22px;font-weight:700">3m 12s</div>
+                <div class="trend bad">▼ 12%</div>
+            </div>
+            <div class="kpi">
+                <div>Completion Rate</div>
+                <div style="font-size:22px;font-weight:700">54%</div>
+                <div class="trend bad">▼ 9%</div>
+            </div>
+        </div>
+
+        <div class="chart-card">
+            <canvas id="viewsChart"></canvas>
+        </div>
+    </main>
+
+    <button class="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+    <script>
+    const ctx = document.getElementById('viewsChart');
+    const labels = Array.from({length: 30}, (_, i) => `Day ${i+1}`);
+    // Generate a rapid decrease curve
+    const start = 38000;
+    const data = labels.map((_, i) => Math.round(start * Math.pow(0.90, i) + (Math.random()*1200-600)));
+
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels,
+            datasets: [{
+                label: 'Views per Day',
+                data,
+                borderColor: '#ff6b6b',
+                backgroundColor: 'rgba(255,107,107,.15)',
+                fill: true,
+                tension: .35,
+                pointRadius: 0
+            }]
+        },
+        options: {
+            responsive: true,
+            animation: {
+                duration: 1600,
+                easing: 'easeOutQuart'
+            },
+            scales: {
+                x: { grid: { color: 'rgba(255,255,255,.06)' }, ticks: { color: '#a7c5b0' } },
+                y: { grid: { color: 'rgba(255,255,255,.06)' }, ticks: { color: '#a7c5b0' } }
+            },
+            plugins: {
+                legend: { labels: { color: '#e9ffee' } },
+                tooltip: { backgroundColor: 'rgba(10,24,16,.95)', borderColor: 'rgba(255,255,255,.1)', borderWidth: 1 }
+            }
+        }
+    });
+    </script>
+</body>
+</html>
+
+
