@@ -16,7 +16,7 @@ html,body{margin:0;padding:0;background:linear-gradient(180deg,#000,#0b0b0b 70%,
 .nav .cta{background:linear-gradient(135deg,var(--accent),#ff7a7a);color:#fff;border:none}
 .nav a:hover::after{transform:scaleX(1)}
 .nav a[aria-current="page"]{background:var(--glass);border-color:rgba(255,255,255,.12)}
-.hero{position:relative;min-height:56vh;display:grid;place-items:center;background:url('https://images.unsplash.com/photo-1505685296765-3a2736de412f?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat}
+.hero{position:relative;min-height:56vh;display:grid;place-items:center;background:url('https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.75),rgba(0,0,0,.35)),radial-gradient(60% 60% at 50% 40%,rgba(0,0,0,.2),rgba(0,0,0,.8))}
 .hero-content{position:relative;text-align:center;padding:40px 18px}
 .hero h2{font-size:42px;margin:0 0 8px;letter-spacing:.5px}
